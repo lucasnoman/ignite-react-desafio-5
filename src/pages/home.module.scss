@@ -1,1 +1,63 @@
 // TODO
+.posts {
+  max-width: 720px;
+  margin: auto;
+
+  header {
+    margin: 4rem 0;
+  }
+
+  article {
+    margin-bottom: 3.2rem;
+    color: var(--gray-200);
+
+    a {
+      h1 {
+        font-weight: 700;
+        line-height: 2.125rem;
+        font-size: 1.86rem;
+        color: var(--white);
+      }
+
+      h2 {
+        font-weight: 400;
+        line-height: 1.36rem;
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+      }
+    }
+
+    div {
+      margin-top: 1.6rem;
+
+      time {
+        font-size: 0.93rem;
+        line-height: 1.13rem;
+        margin-right: 1.6rem;
+      }
+
+      span {
+        font-size: 0.93rem;
+        line-height: 1.13rem;
+
+        svg {
+          width: 1.3rem;
+          height: 1.3rem;
+          vertical-align: bottom;
+          margin-right: 0.53rem;
+        }
+      }
+    }
+  }
+
+  button {
+    color: var(--pink-500);
+    background-color: var(--gray-900);
+    border: none;
+
+    &:active {
+      outline: 1px solid var(--gray-300);
+      border-radius: 0.2rem;
+    }
+  }
+}

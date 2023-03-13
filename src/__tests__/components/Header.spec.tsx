@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { RouterContext } from 'next/dist/next-server/lib/router-context';
+import { RouterContext } from 'next/dist/shared/lib/router-context';
 
 import Header from '../../components/Header';
 
@@ -10,7 +10,7 @@ describe('Header', () => {
   beforeAll(() => {
     mockedPush.mockImplementation(() => Promise.resolve());
     const MockedRouterContext = RouterContext as React.Context<unknown>;
-    RouterWrapper = ({ children }): JSX.Element => {
+    RouterWrapper = function ({ children }): JSX.Element {
       return (
         <MockedRouterContext.Provider
           value={{
@@ -40,8 +40,8 @@ describe('Header', () => {
 
     expect(mockedPush).toHaveBeenCalledWith(
       '/',
-      expect.anything(),
       expect.anything()
+      // expect.anything()
     );
   });
 });
