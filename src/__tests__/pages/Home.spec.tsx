@@ -161,14 +161,14 @@ describe('Home', () => {
     expect(mockedPush).toHaveBeenNthCalledWith(
       1,
       '/post/como-utilizar-hooks',
+      expect.anything(),
       expect.anything()
-      // expect.anything()
     );
     expect(mockedPush).toHaveBeenNthCalledWith(
       2,
       '/post/criando-um-app-cra-do-zero',
+      expect.anything(),
       expect.anything()
-      // expect.anything()
     );
   });
 

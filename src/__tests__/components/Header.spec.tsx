@@ -40,8 +40,8 @@ describe('Header', () => {
 
     expect(mockedPush).toHaveBeenCalledWith(
       '/',
+      expect.anything(),
       expect.anything()
-      // expect.anything()
     );
   });
 });
